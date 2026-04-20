@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood-Based Music Chat</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/style.css') }}">
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <h3>Previous Recommendation List</h3>
+            <div class="recommendation">
+                <p>😊 EXERCISING</p>
+                <span>High Energy, Fast Tempo</span>
+            </div>
+            <div class="recommendation">
+                <p>😊 CODING</p>
+                <span>Focused, Ambient Beats</span>
+            </div>
+            <div class="recommendation">
+                <p>😊 CODING</p>
+                <span>Fun</span>
+            </div>
+            <div class="recommendation">
+                <p>😊 TRAVELING</p>
+                <span>Relaxed, Adventurous</span>
+            </div>
+            <div class="recommendation">
+                <p>😊 BREAKUP</p>
+                <span>Melancholic, Emotional</span>
+            </div>
+            <div class="recommendation">
+                <p>😊 COMMUTING</p>
+                <span>Feel-good, Upbeat</span>
+            </div>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="chat-section">
+            <div class="chat-header">
+                <span>←</span>
+                <p>Mood-Based Chat</p>
+                <div class="header-icons">
+                    <span>🔔</span>
+                    <span>⚙️</span>
+                </div>
+            </div>
+
+            <div class="chat-messages">
+                <div class="user-message">
+                    <p>{{ message }}</p>
+                </div>
+                <div class="bot-message">
+                    <p>{{ recommendation|safe }}</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <button class="icon-btn">➕</button>
+                <button class="icon-btn">😊</button>
+                <form action="#">
+                    <label for="txtIp">Music Recommendation</label> <br>
+                    <input
+                     id="txtIp"
+                     type="text"
+                     placeholder="Type a message..."
+                     >
+                    <button type="submit">🎤</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood-Based Music Chat</title>
+    <link rel="stylesheet" href=" {{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Section -->
+        <div class="sidebar">
+            <h3>Previous Recommendation List</h3>
+            <div class="recommendation">
+                <p>😊 EXERCISING</p>
+                <span>High Energy, Fast Tempo</span>
+            </div>
+            <div class="recommendation">
+                <p>😊 CODING</p>
+                <span>Focused, Ambient Beats</span>
+            </div>
+            <div class="recommendation">
+                <p>😊 CODING</p>
+                <span>Fun</span>
+            </div>
+            <div class="recommendation">
+                <p>😊 TRAVELING</p>
+                <span>Relaxed, Adventurous</span>
+            </div>
+            <div class="recommendation">
+                <p>😊 BREAKUP</p>
+                <span>Melancholic, Emotional</span>
+            </div>
+            <div class="recommendation">
+                <p>😊 COMMUTING</p>
+                <span>Feel-good, Upbeat</span>
+            </div>
+        </div>
+
+        <!-- Chat Section -->
+        <div class="chat-section">
+            <div class="chat-header">
+                <span>←</span>
+                <p>Mood-Based Chat</p>
+                <div class="header-icons">
+                    <span>🔔</span>
+                    <span>⚙️</span>
+                </div>
+            </div>
+            <div class="chat-input">
+              <button class="icon-btn">➕</button>
+              <button class="icon-btn">😊</button>
+              <button onclick="startSpeech()" type="button">🎤</button>
+              <form action="/" method="POST">
+                <div class="chat-input">
+                  <input type="text" name="message" placeholder="Type a message..." required />
+                  <button type="submit">submit</button>
+                  <!-- <input type="hidden" name="recommendation"/> -->
+                </div>
+              </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
